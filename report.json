@@ -1,0 +1,111 @@
+{
+  "version": "1",
+  "pip_version": "23.2.1",
+  "install": [
+    {
+      "download_info": {
+        "url": "file:///home/jeromeku/Python/packaging/catlifier-py",
+        "dir_info": {
+          "editable": true
+        }
+      },
+      "is_direct": true,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "catlifier",
+        "version": "0.1.0",
+        "summary": "My catlifier library",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "cats",
+          "purr",
+          "packaging"
+        ],
+        "author_email": "Robin Mueller <robin.mueller.m@gmail.com>",
+        "license": "MIT",
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Natural Language :: English",
+          "Operating System :: POSIX",
+          "Operating System :: Microsoft :: Windows",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Topic :: Communications",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules"
+        ],
+        "requires_dist": [
+          "crcmod ~=1.7"
+        ],
+        "requires_python": ">=3.8",
+        "project_url": [
+          "Homepage, https://github.com/robamu/catlifier"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz",
+        "archive_info": {
+          "hash": "sha256=dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e",
+          "hashes": {
+            "sha256": "dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e"
+          }
+        }
+      },
+      "is_direct": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "crcmod",
+        "version": "1.7",
+        "summary": "CRC Generator",
+        "description": "===========================\ncrcmod for Calculating CRCs\n===========================\n\nThe software in this package is a Python module for generating objects that\ncompute the Cyclic Redundancy Check (CRC).  There is no attempt in this package\nto explain how the CRC works.  There are a number of resources on the web that\ngive a good explanation of the algorithms.  Just do a Google search for \"crc\ncalculation\" and browse till you find what you need.  Another resource can be\nfound in chapter 20 of the book \"Numerical Recipes in C\" by Press et. al.\n\nThis package allows the use of any 8, 16, 24, 32, or 64 bit CRC.  You can\ngenerate a Python function for the selected polynomial or an instance of the\nCrc class which provides the same interface as the ``md5`` and ``sha`` modules\nfrom the Python standard library.  A ``Crc`` class instance can also generate\nC/C++ source code that can be used in another application.\n\n----------\nGuidelines\n----------\n\nDocumentation is available from the doc strings.  It is up to you to decide\nwhat polynomials to use in your application.  If someone has not specified the\npolynomials to use, you will need to do some research to find one suitable for\nyour application.  Examples are available in the unit test script ``test.py``.\nYou may also use the ``predefined`` module to select one of the standard\npolynomials.\n\nIf you need to generate code for another language, I suggest you subclass the\n``Crc`` class and replace the method ``generateCode``.  Use ``generateCode`` as\na model for the new version.\n\n------------\nDependencies\n------------\n\nPython Version\n^^^^^^^^^^^^^^\n\nThe package has separate code to support the 2.x and 3.x Python series.\n\nFor the 2.x versions of Python, these versions have been tested:\n\n* 2.4\n* 2.5\n* 2.6\n* 2.7\n\nIt may still work on earlier versions of Python 2.x, but these have not been\nrecently tested.\n\nFor the 3.x versions of Python, these versions have been tested:\n\n* 3.1\n\nBuilding C extension\n^^^^^^^^^^^^^^^^^^^^\n\nTo build the C extension, the appropriate compiler tools for your platform must\nbe installed. Refer to the Python documentation for building C extensions for\ndetails.\n\n------------\nInstallation\n------------\n\nThe crcmod package is installed using ``distutils``.\nRun the following command::\n\n    python setup.py install\n\nIf the extension module builds, it will be installed.  Otherwise, the\ninstallation will include the pure Python version.  This will run significantly\nslower than the extension module but will allow the package to be used.\n\nFor Windows users who want to use the mingw32 compiler, run this command::\n\n    python setup.py build --compiler=mingw32 install\n\nFor Python 3.x, the install process is the same but you need to use the 3.x\ninterpreter.\n\n------------\nUnit Testing\n------------\n\nThe ``crcmod`` package has a module ``crcmod.test``, which contains unit\ntests for both ``crcmod`` and ``crcmod.predefined``.\n\nWhen you first install ``crcmod``, you should run the unit tests to make sure\neverything is installed properly.  The test script performs a number of tests\nincluding a comparison to the direct method which uses a class implementing\npolynomials over the integers mod 2.\n\nTo run the unit tests on Python >=2.5::\n\n    python -m crcmod.test\n\nAlternatively, in the ``test`` directory run::\n\n    python test_crcmod.py\n\n---------------\nCode Generation\n---------------\n\nThe crcmod package is capable of generating C functions that can be compiled\nwith a C or C++ compiler.  In the test directory, there is an examples.py\nscript that demonstrates how to use the code generator.  The result of this is\nwritten out to the file ``examples.c``.  The generated code was checked to make\nsure it compiles with the GCC compiler.\n\n-------\nLicense\n-------\n\nThe ``crcmod`` package is released under the MIT license. See the ``LICENSE``\nfile for details.\n\n------------\nContributors\n------------\n\nCraig McQueen\n",
+        "home_page": "http://crcmod.sourceforge.net/",
+        "download_url": "http://sourceforge.net/projects/crcmod",
+        "author": "Ray Buvel",
+        "author_email": "rlbuvel@gmail.com",
+        "license": "MIT",
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Education",
+          "Intended Audience :: End Users/Desktop",
+          "Intended Audience :: Information Technology",
+          "Intended Audience :: Science/Research",
+          "License :: OSI Approved :: MIT License",
+          "Operating System :: OS Independent",
+          "Programming Language :: C",
+          "Programming Language :: C++",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 2",
+          "Programming Language :: Python :: 2.4",
+          "Programming Language :: Python :: 2.5",
+          "Programming Language :: Python :: 2.6",
+          "Programming Language :: Python :: 2.7",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.1",
+          "Topic :: Communications",
+          "Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator",
+          "Topic :: Scientific/Engineering :: Mathematics",
+          "Topic :: Utilities"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.4",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "6.1.0-060100-generic",
+    "platform_system": "Linux",
+    "platform_version": "#202303090726 SMP PREEMPT_DYNAMIC Thu Mar  9 12:33:28 UTC 2023",
+    "python_full_version": "3.11.4",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.11",
+    "sys_platform": "linux"
+  }
+}
